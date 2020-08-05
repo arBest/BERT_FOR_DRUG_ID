@@ -38,4 +38,4 @@ Modify example string of less than 512 tokens to extract disease and chemical en
 Output predictions are availabe in $Results_dir within the file **NER_result_preds.tsv**
 
 ## Credits
-We like to credit the authors of [BERT](https://arxiv.org/pdf/1810.04805.pdf) and [BioBERT](https://arxiv.org/pdf/1901.08746.pdf) for the pre-trained models and code.
+We like to credit the authors of [BERT](https://arxiv.org/pdf/1810.04805.pdf) and [BioBERT](https://arxiv.org/pdf/1901.08746.pdf) for the pre-trained models and starter code for pre-training and fine-tuning.
