@@ -5,7 +5,7 @@ This repository provides code using Tensorflow framework to fine-tune models for
 
 Access to GPU/TPUs, cuda/cudnn libraries and enough CPU RAM.
 
-### Clone repository and install requirements.
+### Clone repository and install requirements
 
 `git clone https://github.mskcc.org/knowledgesystems/BioBERT.git`
 
