@@ -13,12 +13,12 @@ Within the folder /datasets, BC5CDR-IOB dataset was used for demo and consists o
 
 Other NER datasets are available [here](https://github.com/cambridgeltl/MTL-Bioinformatics-2016).
 
-## Download BioBERT pretrained models 
+## BioBERT pretrained models 
 All the pre-trained model checkpoints are found [here](https://github.com/naver/biobert-pretrained/releases).
 
 Recommeded by authors to use **Pre-trained weight of BioBERT v1.1 (+PubMed 1M)**
 
-`wget https://github.com/naver/biobert-pretrained/releases/download/v1.1-pubmed/biobert_v1.1_pubmed.tar.gz`
+`wget https://github.com/naver/biobert-pretrained/releases/download/v1.1-pubmed/biobert_v1.1_pubmed.tar.gz` to download model folder and place it under ./pretrained_weights
 
 ## Fine-tune the pre-trained model for Named Entity Recognition (NER)
 
