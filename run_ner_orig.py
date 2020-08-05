@@ -189,7 +189,7 @@ class NerProcessor(DataProcessor):
 
 
     def get_labels(self):
-        return ["[PAD]", "B-Chemical", "I-Chemical", "B-Disease", "I-Disease", "O", "X", "[CLS]", "[SEP]"] 
+        return ["[PAD]", "B", "I", "O", "X", "[CLS]", "[SEP]"] 
 
     def _create_example(self, lines, set_type):
         examples = []
