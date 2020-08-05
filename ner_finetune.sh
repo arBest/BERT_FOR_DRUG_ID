@@ -2,12 +2,12 @@
 
 # Fine-tune for NER
 
-# path to pretrained BioBERT model
+# modify - path to pretrained BioBERT model
 export BIOBERT_DIR=/home/rajannaa/biobert/pretrained_weights/biobert_v1.1_pubmed
 echo $BIOBERT_DIR
-# path to dataset
+# modify - path to dataset
 export NER_DIR=/home/rajannaa/MTL-Bioinformatics-2016/data/BC5CDR-IOB
-# create and output results to a output dir
+# modify - create and output results to a output dir
 export OUTPUT_DIR=./ner_outputs_BC5CDR-chem-IOB
 mkdir -p $OUTPUT_DIR
 
