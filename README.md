@@ -3,7 +3,7 @@ This repository provides code using Tensorflow framework to fine-tune models for
 
 ## Pre-requisites
 
-Access to GPU/TPUs, cuda/cudnn libraries and enough CPU RAM.
+Access to GPU/TPUs, CUDA/CUDNN libraries and enough CPU RAM.
 
 ### Clone repository and install requirements
 
