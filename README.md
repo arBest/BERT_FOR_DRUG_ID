@@ -8,7 +8,8 @@ cd BioBERT; pip install -r requirements.txt
 
 ## Download dataset 
 git clone https://github.com/cambridgeltl/MTL-Bioinformatics-2016.git 
-Use any NER dataset but for demo used  MTL-Bioinformatics-2016/BC5CDR-IOB dataset that consisted of entities tagged to obtain disease and chemical (including drug names)
+
+Use any NER dataset, for demo used MTL-Bioinformatics-2016/BC5CDR-IOB dataset that consisted of entities tagged to obtain disease and chemical (including drug names).
 
 ## Download BioBERT pretrained models 
 All the pre-trained model checkpoints are found here https://github.com/naver/biobert-pretrained/releases
