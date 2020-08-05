@@ -2,8 +2,9 @@
 This repository provides code to fine-tune models for Named Entity Recognition (NER) on bio-medical datasets.
 
 ## Pre-requisites
-
-Run requirements script to download tensorflow
+Clone and install requirements script
+git clone https://github.mskcc.org/knowledgesystems/BioBERT.git
+cd BioBERT; pip install -r requirements.txt
 
 ## Download dataset 
 git clone https://github.com/cambridgeltl/MTL-Bioinformatics-2016/tree/master/data/BC5CDR-IOB
@@ -17,9 +18,11 @@ wget https://github.com/naver/biobert-pretrained/releases/download/v1.1-pubmed/b
 ## Fine-tune the pre-trained model for Named Entity Recognition (NER)
 Within the script modify paths to provide downloaded pre-trained model dir and dataset dir.
 
+### Fine-tune (can change hyper-parameters in this script)
 Run bash ner_finetune.sh
 
-Inference example
+### Inference example
 Modify the paths in ner_infer.sh to give paths to vocab.txt and config file of the BERT model.
 
 Run python ner_example.py
+
