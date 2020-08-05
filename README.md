@@ -1,8 +1,11 @@
 # BioBERT
-This repository provides code to fine-tune models for Named Entity Recognition (NER) on bio-medical datasets.
+This repository provides code using Tensorflow framework to fine-tune models for Named Entity Recognition (NER) on bio-medical datasets.
 
 ## Pre-requisites
-Clone repository and install requirements.
+
+Access to GPU/TPUs, cuda/cudnn libraries and enough CPU RAM.
+
+### Clone repository and install requirements.
 
 `git clone https://github.mskcc.org/knowledgesystems/BioBERT.git`
 
