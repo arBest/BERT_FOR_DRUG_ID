@@ -33,3 +33,5 @@ Modify example string of less than 512 tokens to extract disease and chemical en
 
 `python ner_example.py`
 
+Output predictions are availabe in $Results_dir within the file **NER_result_preds.tsv**
+
