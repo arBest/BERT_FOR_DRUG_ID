@@ -27,8 +27,9 @@ Within the script, **modify paths** to provide downloaded pre-trained model and 
 `bash ner_finetune.sh`
 
 ### Run inference on an example
-**Modify paths** in ner_infer.sh to give paths to vocab.txt and config file of the BERT model.
+**Modify paths** in `ner_infer.sh` to give paths to vocab.txt and config file of the BERT model.
 
-Modify example to extract disease and chemical entities
+Modify example string of less than 512 tokens to extract disease and chemical entities 
+
 `python ner_example.py`
 
