@@ -16,7 +16,7 @@ Use any NER dataset, for demo MTL-Bioinformatics-2016/BC5CDR-IOB dataset was use
 ## Download BioBERT pretrained models 
 All the pre-trained model checkpoints are found [here](https://github.com/naver/biobert-pretrained/releases).
 
-Recommeded by authors to use Pre-trained weight of BioBERT v1.1 (+PubMed 1M)
+Recommeded by authors to use **Pre-trained weight of BioBERT v1.1 (+PubMed 1M)**
 
 `wget https://github.com/naver/biobert-pretrained/releases/download/v1.1-pubmed/biobert_v1.1_pubmed.tar.gz`
 
