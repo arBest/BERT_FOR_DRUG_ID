@@ -9,7 +9,7 @@ tokens = nltk.word_tokenize(text)
 
 print(tokens)
 
-file_path = open('/home/rajannaa/MTL-Bioinformatics-2016/data/BC5CDR-IOB/test.tsv', 'w')
+file_path = open('./datasets/BC5CDR-IOB/test.tsv', 'w')
 writer = csv.writer(file_path, delimiter='\t')
 
 for item in tokens:
@@ -17,13 +17,13 @@ for item in tokens:
 file_path.close()
 
 # call inference on tokens
-cmd = subprocess.run(['bash', '/home/rajannaa/biobert/ner_infer.sh'])
+cmd = subprocess.run(['bash', './ner_infer.sh'])
 
 # word predictions
-results_pred_file = '/home/rajannaa/biobert/ner_outputs_BC5CDR-chem-IOB/NER_result_conll.txt'
+results_pred_file = './ner_outputs_BC5CDR-IOB/NER_result_conll.txt'
 pred_file = open(results_pred_file, 'r')
 
-final_preds_file = open('/home/rajannaa/biobert/ner_outputs_BC5CDR-chem-IOB/NER_result_preds.tsv', 'w')
+final_preds_file = open('./ner_outputs_BC5CDR-IOB/NER_result_preds.tsv', 'w')
 final_preds_writer = csv.writer(final_preds_file, delimiter='\t')
 for line in pred_file.readlines():
 	items = line.split(' ')
