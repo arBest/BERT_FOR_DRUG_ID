@@ -31,7 +31,7 @@ Recommeded by authors to use **Pre-trained weight of BioBERT v1.1 (+PubMed 1M)**
 ### Run inference on an example
 `ner_infer.sh` has paths to BERT's vocab.txt and config file.
 
-Modify example string of less than 512 tokens to extract disease and chemical entities 
+Modify example string (less than 512 tokens) to extract disease and chemical entities. 
 
 `python ner_example.py`
 
