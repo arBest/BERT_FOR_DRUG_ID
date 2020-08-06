@@ -7,14 +7,14 @@ Access to GPU/TPUs, CUDA/CUDNN libraries and enough CPU RAM.
 
 ### Clone repository and install requirements
 
-`git clone https://github.mskcc.org/knowledgesystems/BioBERT.git`
-
 ```
+git clone https://github.mskcc.org/knowledgesystems/BioBERT.git
 cd BioBERT
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
 ```
+
 ## Dataset 
 Within the folder /datasets, BC5CDR-IOB dataset was used for demo and consists of entities tagged to obtain disease and chemical (including drugs) names.
 
