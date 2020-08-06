@@ -41,5 +41,35 @@ Modify example string (less than 512 tokens) to extract disease and chemical ent
 
 Output predictions are availabe in $Results_dir within the file **NER_result_preds.tsv**
 
+## Spacy package
+The fine-tuned BERT model is available in spacy.
+
+Please follow the command line instructions below to get a spacy model which converts tf to pytorch model and package it with spacy. 
+
+```
+bash convert_tf_pytorch_spacy.sh
+python serialize_save_spacy.py
+python -m spacy package $PWD/$results_dir/spacy $PWD/$results_dir/spacy-package
+```
+
+From spacy-package folder, go into model (en_model-0.0.0) folder to modify meta.json
+
+```
+Remove
+
+"requirements":[
+    "None>=0.6.2"
+  ]
+
+python setup.py sdist
+```
+
+Model succesfully created:
+`./biobert/ner_outputs_BC5CDR-chem-IOB/spacy-package/en_model-0.0.0/en_model`
+
+Install it with:
+`pip3 install en_model-0.0.0/dist/en_model-0.0.0.tar.gz`
+
 ## Credits
 We like to credit the authors of [BERT](https://arxiv.org/pdf/1810.04805.pdf) and [BioBERT](https://arxiv.org/pdf/1901.08746.pdf) for the pre-trained models and starter code for pre-training and fine-tuning.
+
