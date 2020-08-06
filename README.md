@@ -15,12 +15,12 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-## Dataset 
+## Datasets 
 Within the folder /datasets, BC5CDR-IOB dataset was used for demo and consists of entities tagged to obtain disease and chemical (including drugs) names.
 
 Other NER datasets are available [here](https://github.com/cambridgeltl/MTL-Bioinformatics-2016).
 
-## BioBERT pretrained models 
+## BioBERT pre-trained models 
 All the pre-trained model checkpoints are found [here](https://github.com/naver/biobert-pretrained/releases).
 
 Recommeded by authors to use **Pre-trained weight of BioBERT v1.1 (+PubMed 1M)**
@@ -29,7 +29,7 @@ Recommeded by authors to use **Pre-trained weight of BioBERT v1.1 (+PubMed 1M)**
 
 ## Fine-tune the pre-trained model for Named Entity Recognition (NER)
 
-### Run fine-tuning script (can change hyper-parameters in this script)
+### Run fine-tuning script (can change hyper-parameters in this script) for an NLP task on a task-specific dataset
 `bash ner_finetune.sh`
 
 ### Run inference on an example
