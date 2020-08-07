@@ -49,7 +49,7 @@ Please follow the command line instructions below to get a spacy model which con
 ```
 bash convert_tf_pytorch_spacy.sh
 python serialize_save_spacy.py
-python -m spacy package $PWD/$results_dir/spacy $PWD/$results_dir/spacy-package
+python -m spacy package $PWD/ner_outputs_BC5CDR-chem-IOB/spacy $PWD/ner_outputs_BC5CDR-chem-IOB/spacy-package
 ```
 
 From spacy-package folder, go into model (en_model-0.0.0) folder to modify meta.json
