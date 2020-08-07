@@ -52,23 +52,19 @@ python serialize_save_spacy.py
 python -m spacy package $PWD/ner_outputs_BC5CDR-chem-IOB/spacy $PWD/ner_outputs_BC5CDR-chem-IOB/spacy-package
 ```
 
-From spacy-package folder, go into model (en_model-0.0.0) folder to modify meta.json
+From spacy-package folder, go into model (en_biobert_v11-0.0.0) folder to modify meta.json
+
 
 ```
-Remove
-
-"requirements":[
-    "None>=0.6.2"
-  ]
-
+cd en_biobert_v11-0.0.0/
 python setup.py sdist
 ```
 
 Model succesfully created:
-`./biobert/ner_outputs_BC5CDR-chem-IOB/spacy-package/en_model-0.0.0/en_model`
+`./biobert/ner_outputs_BC5CDR-chem-IOB/spacy-package/en_biobert_v11-0.0.0/en_biobert_v11`
 
 Install it with:
-`pip3 install en_model-0.0.0/dist/en_model-0.0.0.tar.gz`
+`pip3 install en_biobert_v11-0.0.0/dist/en_biobert_v11-0.0.0.tar.gz`
 
 ## Credits
 We like to credit the authors of [BERT](https://arxiv.org/pdf/1810.04805.pdf) and [BioBERT](https://arxiv.org/pdf/1901.08746.pdf) for the pre-trained models and starter code for pre-training and fine-tuning.
