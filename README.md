@@ -32,6 +32,8 @@ Recommeded by authors to use **Pre-trained weight of BioBERT v1.1 (+PubMed 1M)**
 ### Run fine-tuning script (can change hyper-parameters in this script) for an NLP task on a task-specific dataset
 `bash ner_finetune.sh`
 
+Creates a results dir - `ner_outputs_BC5CDR-chem-IOB`
+
 ### Run inference on an example
 `ner_infer.sh` has paths to BERT's vocab.txt and config file.
 
