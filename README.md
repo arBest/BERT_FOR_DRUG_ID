@@ -43,7 +43,7 @@ Modify example string (less than 512 tokens) to extract disease and chemical ent
 
 Output predictions are availabe in $Results_dir within the file **NER_result_preds.tsv**
 
-## Spacy package
+## Spacy
 The fine-tuned BERT model is available in spacy.
 
 Please follow the command line instructions below to get a spacy model which converts tf to pytorch model and package it with spacy. 
