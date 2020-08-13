@@ -46,11 +46,13 @@ Output predictions are availabe in $Results_dir within the file **NER_result_pre
 ## Embeddings
 
 ### Sentence embeddings
-`python get_embedding.py` extracts contextual features(like ELMo) from hidden layer(s) (can be specified).
+`python get_embedding.py` extracts pre-trained contextual features(like ELMo) from hidden layer(s) (can be specified).
 
-(1) The input can be provided to this script where input file is a sentence per line.
+(1) A input txt file to be provided to this script where there is a sentence per line.
 
 (2) Output returns a json file per line.
+
+TODO - Use task specific fine-tuned model to extract features instead of pre-trained model.
 
 ## Spacy
 The fine-tuned BERT model is available in spacy.
@@ -64,7 +66,6 @@ python -m spacy package $PWD/ner_outputs_BC5CDR-chem-IOB/spacy $PWD/ner_outputs_
 ```
 
 From spacy-package folder, go into model (en_biobert_v11-0.0.0) folder to modify meta.json
-
 
 ```
 cd en_biobert_v11-0.0.0/
