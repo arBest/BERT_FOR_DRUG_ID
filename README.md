@@ -47,7 +47,9 @@ Output predictions are availabe in $Results_dir within the file **NER_result_pre
 
 ###Sentence embeddings
 `python get_embedding.py` extracts contextual features(like ELMo) from hidden layer(s) (can be specified).
+
 (1) The input can be provided to this script where input file is a sentence per line.
+
 (2) Output returns a json file per line.
 
 ## Spacy
