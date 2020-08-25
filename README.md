@@ -63,6 +63,7 @@ Sub-tokens (fed into BERT):
 Output entity predictions for tokens (and not sub-tokens) are availabe in results dir within the file **NER_result_preds.tsv**
 
 Token entities can be either: 
+
 `B-Disease - Beginning Disease, I-Disease - Intermediate Disease, B-Chemical - Beginning Chemical, I-Chemical - Intermediate Chemical, Others`
 
 ## 2. BERT for Embeddings extraction
