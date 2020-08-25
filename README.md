@@ -35,14 +35,35 @@ Recommeded by authors to use **Pre-trained weight of BioBERT v1.1 (+PubMed 1M)**
 
 Creates and writes results into **ner_outputs_test** directory.
 
+Evaluation results on dev dataset:
+
+```
+eval_f = 0.9089838, eval_precision = 0.89400303, eval_recall = 0.9247942, global_step = 1425, loss = 25.761856
+```
+
 ### Run inference on example string to extract named entites
 Example input string is provided to BERT to extract disease and chemical entities. 
 
 `python ner_example.py`
 
-Output predictions are availabe in results dir within the file **NER_result_preds.tsv**
+Input string (as provided in **ner_example.py**) is initially tokenized using NLTK tokenizer to get **tokens** and are further tokenized into the below **sub-tokens** and fed into BERT:
+
+Tokens:
+```
+['His', 'afatinib', 'has', 'been', 'poorly', 'tolerated', 'despite', 'dose', 'reduction', ',', 'therefore', 'I', 'concur', 'with', 'Dr.', 'Z', "'s", 'recommendation', 'to', 'switch', 'to', 'either', 'gefitinib', 'or', 'low', 'dose', 'erlotinib', '.']
+```
+
+Sub-tokens:
+```
+['His', 'a', '##fa', '##tin', '##ib', 'has', 'been', 'poorly', 'tolerate', '##d', 'despite', 'dose', 'reduction', ',', 'therefore', 'I', 'con', '##cu', '##r', 'with', 'Dr', '.', 'Z', "'", 's', 'recommendation', 'to', 'switch', 'to', 'either', 'g', '##ef', '##iti', '##ni', '##b', 'or', 'low', 'dose', 'er', '##lot', '##ini', '##b', '.']
+```
+
+Output entity predictions for tokens (and not sub-tokens) are availabe in results dir within the file **NER_result_preds.tsv**
 
 ## 2. BERT for Embeddings extraction
+
+### Word embeddings
+Based on Sub-token words (obtain by WordPiece vocabulary) have embeddings (aka word embeddings) of size (28996, 768)
 
 ### Sentence embeddings
 `python get_embedding.py` extracts pre-trained contextual features(like ELMo) from hidden layer(s) (can be specified).
