@@ -15,6 +15,7 @@ source env/bin/activate
 pip install -r requirements.txt
 cd pretrained_weights
 wget https://github.com/naver/biobert-pretrained/releases/download/v1.1-pubmed/biobert_v1.1_pubmed.tar.gz 
+cp pretrained_weights/biobert_v1.1_pubmed/model.ckpt-1000000.data-00000-of-00001 pretrained_weights/biobert_v1.1_pubmed/model.ckpt-1000000
 ```
 
 ## Datasets 
