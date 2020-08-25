@@ -48,14 +48,14 @@ Example input string is provided to BERT to extract disease and chemical entitie
 
 Note: Please pass 1 sentence at a time & length of input len(sub-tokens) < what the model can take as input to avoid trimming of text. Check run_ner.py for setting the max.
 
-Input string (as provided in **ner_example.py**) is initially tokenized using NLTK tokenizer to get **tokens** and are further tokenized into the below **sub-tokens** and fed into BERT:
+Input string (as provided in **ner_example.py**) is initially tokenized using NLTK tokenizer to get **tokens** and are further tokenized into the below **sub-tokens**:
 
 Tokens:
 ```
 ['His', 'afatinib', 'has', 'been', 'poorly', 'tolerated', 'despite', 'dose', 'reduction', ',', 'therefore', 'I', 'concur', 'with', 'Dr.', 'Z', "'s", 'recommendation', 'to', 'switch', 'to', 'either', 'gefitinib', 'or', 'low', 'dose', 'erlotinib', '.']
 ```
 
-Sub-tokens:
+Sub-tokens (fed into BERT):
 ```
 ['His', 'a', '##fa', '##tin', '##ib', 'has', 'been', 'poorly', 'tolerate', '##d', 'despite', 'dose', 'reduction', ',', 'therefore', 'I', 'con', '##cu', '##r', 'with', 'Dr', '.', 'Z', "'", 's', 'recommendation', 'to', 'switch', 'to', 'either', 'g', '##ef', '##iti', '##ni', '##b', 'or', 'low', 'dose', 'er', '##lot', '##ini', '##b', '.']
 ```
