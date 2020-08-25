@@ -28,7 +28,6 @@ final_preds_file = open('./ner_outputs_test/NER_result_preds.tsv', 'w')
 final_preds_writer = csv.writer(final_preds_file, delimiter='\t')
 for line in pred_file.readlines():
 	items = line.split(' ')
-	print(items, len(items))
 	if len(items) != 1:
 		final_preds_writer.writerow((items[0], items[2].strip()))
 final_preds_file.close()
