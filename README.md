@@ -30,7 +30,7 @@ Recommeded by authors to use **Pre-trained weight of BioBERT v1.1 (+PubMed 1M)**
 
 ## 1. BERT for Named Entity Recognition (NER)
 
-### Run fine-tuning script (can change hyper-parameters in this script) for an NLP task on a task-specific dataset
+### Fine-tune (can change hyper-parameters in this script)
 `bash ner_finetune.sh`
 
 Creates and writes results into **ner_outputs_test** directory.
@@ -41,7 +41,7 @@ Evaluation results on dev dataset:
 eval_f = 0.9089838, eval_precision = 0.89400303, eval_recall = 0.9247942, global_step = 1425, loss = 25.761856
 ```
 
-### Run inference on example string to extract named entites
+### Run inference using fine-tuned model on example string to extract named entites
 Example input string is provided to BERT to extract disease and chemical entities. 
 
 `python ner_example.py`
