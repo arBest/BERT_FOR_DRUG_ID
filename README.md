@@ -39,8 +39,14 @@ Creates and writes results into **ner_outputs_test** directory.
 
 Evaluation results on dev dataset:
 
+After training for 10 epochs
 ```
 eval_f = 0.9089838, eval_precision = 0.89400303, eval_recall = 0.9247942, global_step = 1425, loss = 25.761856
+```
+
+After training for 20 epochs
+```
+eval_f = 0.91215086, eval_precision = 0.89916015, eval_recall = 0.9257976, global_step = 2850, loss = 38.24469
 ```
 
 ### Run inference using fine-tuned model on example string to extract named entites
