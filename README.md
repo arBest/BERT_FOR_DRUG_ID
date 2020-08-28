@@ -25,6 +25,24 @@ Within the folder /datasets, BC5CDR-IOB dataset was used for demo. It consists o
 
 Other NER datasets are available [here](https://github.com/cambridgeltl/MTL-Bioinformatics-2016).
 
+### How to add custom annotated data for NER?
+Please look at /datasets/BC5CDR-IOB/train.tsv to check example formatting of tagged tokens that applies for validation and test datasets.
+
+Example (from `train.tsv`):
+
+```
+Selegiline      B-Chemical
+-       O
+induced O
+postural        B-Disease
+hypotension     I-Disease
+in      O
+Parkinson       B-Disease
+.
+.
+.
+```
+
 ## BioBERT pre-trained models 
 All the pre-trained model checkpoints are found [here](https://github.com/naver/biobert-pretrained/releases).
 
