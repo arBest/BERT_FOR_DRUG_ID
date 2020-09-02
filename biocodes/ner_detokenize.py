@@ -133,25 +133,10 @@ def transform2CoNLLForm(golden_path, output_dir, bert_pred, debug):
         offset = 0 # Since some sentences can be trimmed due to max_seq_length, we use offset method.
 
         for idx, (bpred_t, bpred_l) in enumerate(zip(bert_pred['toks'], bert_pred['labels'])):
-            if bpred_t=='[SEP]':
-                if ans['labels'][idx+offset] != '[SEP]':
-                    # When a sentence is trimmed ; len > max_seq_length -> find begining of new sentence.
-                    print("## The predicted sentence of BioBERT model looks like trimmed. (The Length of the tokenized input sequence is longer than max_seq_length); Filling O label instead.")
-                    print("   -> Showing 10 words near skipped part : %s"%" ".join(ans['toks'][idx+offset:idx+offset+11]))
-                    for offIdx, label in enumerate(ans['labels'][idx+offset:]):
-                        if label == '[SEP]':
-                            offset += offIdx
-                            break
-                        else:
-                            out_.write("%s %s-MISC %s-MISC\n"%(ans['toks'][idx+offset+offIdx], ans['labels'][idx+offset+offIdx], "O"))
+            # print(bpred_t, bpred_l, type(bpred_t), type(bpred_l))
+            if bpred_t != '[SEP]' or bpred_t != '[CLS]':
+                out_.write("%s %s %s"%(bpred_t, bpred_l, bpred_l))
                 out_.write("\n")
-            elif bpred_t=='[CLS]':
-                pass
-            else:
-                try:
-                    out_.write("%s %s-MISC %s-MISC\n"%(bpred_t, ans['labels'][idx+offset], bpred_l))
-                except:
-                    print("idx: ", idx, "offset: ", offset)
 
 if __name__ == "__main__":
     bert_pred = detokenize(pred_token_test_path=args.token_test_path, pred_label_test_path=args.label_test_path)
