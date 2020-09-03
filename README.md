@@ -72,7 +72,7 @@ Example input string is provided to BERT to extract disease and chemical entitie
 
 `python ner_example.py`
 
-Note: Please pass 1 sentence at a time & length of input len(sub-tokens) < what the model can take as input to avoid trimming of text. Check run_ner.py for setting the max.
+ Note: Please pass 1 sentence at a time & length of input len(sub-tokens) < model's input limit (128 sub-tokens) to avoid trimming of text. Check run_ner.py for setting the max (from 128 to 384 sub-tokens).
 
 Input string (as provided in **ner_example.py**) is initially tokenized using NLTK tokenizer to get **tokens** and are further tokenized into the below **sub-tokens**:
 
