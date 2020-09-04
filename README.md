@@ -92,7 +92,7 @@ Token entities can be either:
 
 `B-Disease - Beginning Disease, I-Disease - Intermediate Disease, B-Chemical - Beginning Chemical, I-Chemical - Intermediate Chemical, Others`
 
-## 2. BERT for Embeddings extraction
+## 2. BERT for embeddings extraction
 
 ### Word embeddings
 Based on Sub-token words (obtain by WordPiece vocabulary) have embeddings (aka word embeddings) of size (28996, 768)
