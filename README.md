@@ -1,5 +1,5 @@
 # BioBERT
-This repository provides code using Tensorflow v1 to pre-train Language Models (LMs) and fine-tune models for Named Entity Recognition (NER) on bio-medical datasets.
+This repository provides code using Tensorflow v1 to pre-train Language Models (LMs) and fine-tune models for Named Entity Recognition (NER) on bio-medical datasets to extract disease names and drug names.
 
 ## Pre-requisites
 
