@@ -27,9 +27,9 @@ import modeling
 import tokenization
 import tensorflow as tf
 
-flags = tf.flags
+flags = tf.flags 
 
-FLAGS = flags.FLAGS
+FLAGS = flags.FLAGS 
 
 flags.DEFINE_string("input_file", None, "")
 
@@ -263,6 +263,7 @@ def convert_examples_to_features(examples, seq_length, tokenizer):
       tokens.append("[SEP]")
       input_type_ids.append(1)
 
+    print('code tokens are', tokens)
     input_ids = tokenizer.convert_tokens_to_ids(tokens)
 
     # The mask has 1 for real tokens and 0 for padding tokens. Only real
@@ -349,7 +350,7 @@ def main(_):
 
   tokenizer = tokenization.FullTokenizer(
       vocab_file=FLAGS.vocab_file, do_lower_case=FLAGS.do_lower_case)
-
+  
   is_per_host = tf.contrib.tpu.InputPipelineConfig.PER_HOST_V2
   run_config = tf.contrib.tpu.RunConfig(
       master=FLAGS.master,

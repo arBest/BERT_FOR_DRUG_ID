@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#BSUB -J test_ber
+#BSUB -n 1
+#BSUB -q gpuqueue -gpu "num=1"
+#BSUB -R span[hosts=1]
+#BSUB -R rusage[mem=12]
+#BSUB -W 12:00
+#BSUB -o %J.stdout
+#BSUB -eo %J.stderr
+
+module load cudnn/7.6-cuda10.1
+source /home/rajannaa/transformers/env/bin/activate
+cd /home/rajannaa/biobert/
+bash /home/rajannaa/biobert/ner_prototype.sh
